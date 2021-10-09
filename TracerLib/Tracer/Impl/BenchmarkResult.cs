@@ -4,21 +4,21 @@ namespace TracerLib.Tracer.Impl
 {
     public class BenchmarkResult
     {
-        private ConcurrentDictionary<int, BenchmarkThread> BenchmarksThread { get; }
+        private ConcurrentDictionary<int, BenchmarkThread> BenchmarkThreads { get; }
 
-        public BenchmarkResult(ConcurrentDictionary<int, BenchmarkThread> benchmarksThread)
+        public BenchmarkResult(ConcurrentDictionary<int, BenchmarkThread> benchmarkThreads)
         {
-            BenchmarksThread = benchmarksThread;
+            BenchmarkThreads = benchmarkThreads;
         }
-
-        public ConcurrentDictionary<int, BenchmarkThread> GetBenchmarksThread()
+        
+        public ConcurrentDictionary<int, BenchmarkThread> GetBenchmarkThreads()
         {
-            return BenchmarksThread;
+            return BenchmarkThreads;
         }
 
         public BenchmarkThread GetBenchmarkThreadById(int id)
         {
-            return  BenchmarksThread.GetOrAdd(id, new BenchmarkThread(id));
+            return  BenchmarkThreads.GetOrAdd(id, new BenchmarkThread(id));
         }
     }
 }

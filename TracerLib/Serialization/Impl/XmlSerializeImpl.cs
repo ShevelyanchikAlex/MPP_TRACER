@@ -11,7 +11,7 @@ namespace TracerLib.Serialization.Impl
     {
         public string Serialize(BenchmarkResult benchmarkResult)
         {
-            var benchmarksThread = benchmarkResult.GetBenchmarksThread().Values.ToArray();
+            var benchmarksThread = benchmarkResult.GetBenchmarkThreads().Values.ToArray();
             var xmlSerializer = new XmlSerializer(benchmarksThread.GetType());
             var sw = new StringWriter();
 

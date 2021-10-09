@@ -11,7 +11,7 @@ namespace TracerLib.Serialization.Impl
         public string Serialize(BenchmarkResult benchmarkResult)
         {
             return JsonConvert.SerializeObject(new Dictionary<string, ICollection<BenchmarkThread>>
-                {{"threads", benchmarkResult.GetBenchmarksThread().Values}}, Formatting.Indented);
+                {{"threads", benchmarkResult.GetBenchmarkThreads().Values}}, Formatting.Indented);
         }
     }
 }

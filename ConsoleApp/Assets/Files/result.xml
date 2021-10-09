@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <thread id="4" time="328">
-    <methods time="171" name="MyMethod" class="Foo">
-      <methods time="157" name="InnerMethod" class="Bar" />
+  <thread id="4" time="182">
+    <methods time="182" name="MyMethod" class="Foo">
+      <methods time="160" name="InnerMethod" class="Bar" />
     </methods>
   </thread>
-  <thread id="5" time="328">
-    <methods time="171" name="MyMethod" class="Foo">
-      <methods time="157" name="InnerMethod" class="Bar" />
+  <thread id="5" time="182">
+    <methods time="182" name="MyMethod" class="Foo">
+      <methods time="160" name="InnerMethod" class="Bar" />
     </methods>
   </thread>
 </root>

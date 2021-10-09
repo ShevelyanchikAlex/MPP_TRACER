@@ -16,7 +16,7 @@ namespace Tests
         public void SingleThreadTest()
         {
             _foo.MyMethod();
-            Assert.AreEqual(1, _tracer.GetTraceResult().GetBenchmarksThread().Count);
+            Assert.AreEqual(1, _tracer.GetTraceResult().GetBenchmarkThreads().Count);
         }
 
         [Test]
@@ -30,7 +30,7 @@ namespace Tests
             thread1.Join();
             thread2.Join();
             
-            Assert.AreEqual(3, _tracer.GetTraceResult().GetBenchmarksThread().Count);
+            Assert.AreEqual(3, _tracer.GetTraceResult().GetBenchmarkThreads().Count);
         }
     }
 }

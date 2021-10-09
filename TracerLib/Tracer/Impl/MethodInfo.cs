@@ -18,7 +18,7 @@ namespace TracerLib.Tracer.Impl
         [JsonPropertyName("class")]
         [XmlAttribute("class")]
         public string ClassName { get; set; }
-        
+
         [JsonPropertyName("methods")]
         [XmlElement("methods")]
         public List<MethodInfo> Methods { get; set; }
@@ -52,7 +52,7 @@ namespace TracerLib.Tracer.Impl
 
         public long GetElapsedTime()
         {
-            return _stopwatch.ElapsedMilliseconds;
+            return (long) ElapsedTime;
         }
 
         public string GetMethodPath()
