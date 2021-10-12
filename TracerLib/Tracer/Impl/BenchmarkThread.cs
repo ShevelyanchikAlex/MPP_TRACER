@@ -44,8 +44,8 @@ namespace TracerLib.Tracer.Impl
                 ManageInnerMethods(index);
             }
 
-            ThreadTime += MethodsInfo[index].GetElapsedTime();
             MethodsInfo[index].CalculateElapsedTime();
+            ThreadTime += MethodsInfo[index].GetElapsedTime();
         }
 
         private void ManageInnerMethods(int index)
@@ -58,8 +58,8 @@ namespace TracerLib.Tracer.Impl
                 MethodsInfo.RemoveAt(MethodsInfo.Count - 1);
             }
 
-            MethodsInfo[index].SetMethods(innerMethods);
             MethodsInfo[index].CalculateElapsedTime();
+            MethodsInfo[index].SetMethods(innerMethods);
         }
     }
 }
